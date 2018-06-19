@@ -1,0 +1,626 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C9288FC820D902EA005A313C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9288FC720D902EA005A313C /* AppDelegate.swift */; };
+		C9288FCA20D902EA005A313C /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9288FC920D902EA005A313C /* GameViewController.swift */; };
+		C9288FCD20D902EA005A313C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9288FCB20D902EA005A313C /* Main.storyboard */; };
+		C9288FD020D902EA005A313C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9288FCE20D902EA005A313C /* LaunchScreen.storyboard */; };
+		C9288FD920D902EA005A313C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9288FD820D902EA005A313C /* AppDelegate.swift */; };
+		C9288FDB20D902EA005A313C /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9288FDA20D902EA005A313C /* GameViewController.swift */; };
+		C9288FDE20D902EA005A313C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9288FDC20D902EA005A313C /* Main.storyboard */; };
+		C9288FE720D902EA005A313C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9288FE620D902EA005A313C /* AppDelegate.swift */; };
+		C9288FE920D902EA005A313C /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9288FE820D902EA005A313C /* GameViewController.swift */; };
+		C9288FEC20D902EA005A313C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9288FEA20D902EA005A313C /* Main.storyboard */; };
+		C9288FEE20D902EA005A313C /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = C9288FBC20D902E7005A313C /* Shaders.metal */; };
+		C9288FEF20D902EA005A313C /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = C9288FBC20D902E7005A313C /* Shaders.metal */; };
+		C9288FF020D902EA005A313C /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = C9288FBC20D902E7005A313C /* Shaders.metal */; };
+		C9288FF120D902EA005A313C /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9288FBD20D902E7005A313C /* Renderer.swift */; };
+		C9288FF220D902EA005A313C /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9288FBD20D902E7005A313C /* Renderer.swift */; };
+		C9288FF320D902EA005A313C /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9288FBD20D902E7005A313C /* Renderer.swift */; };
+		C9288FF420D902EA005A313C /* ShaderTypes.h in Resources */ = {isa = PBXBuildFile; fileRef = C9288FBE20D902E7005A313C /* ShaderTypes.h */; };
+		C9288FF520D902EA005A313C /* ShaderTypes.h in Resources */ = {isa = PBXBuildFile; fileRef = C9288FBE20D902E7005A313C /* ShaderTypes.h */; };
+		C9288FF620D902EA005A313C /* ShaderTypes.h in Resources */ = {isa = PBXBuildFile; fileRef = C9288FBE20D902E7005A313C /* ShaderTypes.h */; };
+		C9288FF720D902EA005A313C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9288FBF20D902EA005A313C /* Assets.xcassets */; };
+		C9288FF820D902EA005A313C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9288FBF20D902EA005A313C /* Assets.xcassets */; };
+		C9288FF920D902EA005A313C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9288FBF20D902EA005A313C /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C9288FBC20D902E7005A313C /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
+		C9288FBD20D902E7005A313C /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+		C9288FBE20D902E7005A313C /* ShaderTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShaderTypes.h; sourceTree = "<group>"; };
+		C9288FBF20D902EA005A313C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C9288FC420D902EA005A313C /* Cobalt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cobalt.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9288FC720D902EA005A313C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C9288FC920D902EA005A313C /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		C9288FCC20D902EA005A313C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C9288FCF20D902EA005A313C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C9288FD120D902EA005A313C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9288FD620D902EA005A313C /* Cobalt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cobalt.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9288FD820D902EA005A313C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C9288FDA20D902EA005A313C /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		C9288FDD20D902EA005A313C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C9288FDF20D902EA005A313C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9288FE420D902EA005A313C /* Cobalt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cobalt.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9288FE620D902EA005A313C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C9288FE820D902EA005A313C /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		C9288FEB20D902EA005A313C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C9288FED20D902EA005A313C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C9288FC120D902EA005A313C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9288FD320D902EA005A313C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9288FE120D902EA005A313C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C9288FB620D902E7005A313C = {
+			isa = PBXGroup;
+			children = (
+				C9288FBB20D902E7005A313C /* Cobalt Shared */,
+				C9288FC620D902EA005A313C /* Cobalt iOS */,
+				C9288FD720D902EA005A313C /* Cobalt tvOS */,
+				C9288FE520D902EA005A313C /* Cobalt macOS */,
+				C9288FC520D902EA005A313C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C9288FBB20D902E7005A313C /* Cobalt Shared */ = {
+			isa = PBXGroup;
+			children = (
+				C9288FBC20D902E7005A313C /* Shaders.metal */,
+				C9288FBD20D902E7005A313C /* Renderer.swift */,
+				C9288FBE20D902E7005A313C /* ShaderTypes.h */,
+				C9288FBF20D902EA005A313C /* Assets.xcassets */,
+			);
+			path = "Cobalt Shared";
+			sourceTree = "<group>";
+		};
+		C9288FC520D902EA005A313C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C9288FC420D902EA005A313C /* Cobalt.app */,
+				C9288FD620D902EA005A313C /* Cobalt.app */,
+				C9288FE420D902EA005A313C /* Cobalt.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C9288FC620D902EA005A313C /* Cobalt iOS */ = {
+			isa = PBXGroup;
+			children = (
+				C9288FC720D902EA005A313C /* AppDelegate.swift */,
+				C9288FC920D902EA005A313C /* GameViewController.swift */,
+				C9288FCB20D902EA005A313C /* Main.storyboard */,
+				C9288FCE20D902EA005A313C /* LaunchScreen.storyboard */,
+				C9288FD120D902EA005A313C /* Info.plist */,
+			);
+			path = "Cobalt iOS";
+			sourceTree = "<group>";
+		};
+		C9288FD720D902EA005A313C /* Cobalt tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				C9288FD820D902EA005A313C /* AppDelegate.swift */,
+				C9288FDA20D902EA005A313C /* GameViewController.swift */,
+				C9288FDC20D902EA005A313C /* Main.storyboard */,
+				C9288FDF20D902EA005A313C /* Info.plist */,
+			);
+			path = "Cobalt tvOS";
+			sourceTree = "<group>";
+		};
+		C9288FE520D902EA005A313C /* Cobalt macOS */ = {
+			isa = PBXGroup;
+			children = (
+				C9288FE620D902EA005A313C /* AppDelegate.swift */,
+				C9288FE820D902EA005A313C /* GameViewController.swift */,
+				C9288FEA20D902EA005A313C /* Main.storyboard */,
+				C9288FED20D902EA005A313C /* Info.plist */,
+			);
+			path = "Cobalt macOS";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C9288FC320D902EA005A313C /* Cobalt iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9288FFC20D902EA005A313C /* Build configuration list for PBXNativeTarget "Cobalt iOS" */;
+			buildPhases = (
+				C9288FC020D902EA005A313C /* Sources */,
+				C9288FC120D902EA005A313C /* Frameworks */,
+				C9288FC220D902EA005A313C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Cobalt iOS";
+			productName = "Cobalt iOS";
+			productReference = C9288FC420D902EA005A313C /* Cobalt.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C9288FD520D902EA005A313C /* Cobalt tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9288FFF20D902EA005A313C /* Build configuration list for PBXNativeTarget "Cobalt tvOS" */;
+			buildPhases = (
+				C9288FD220D902EA005A313C /* Sources */,
+				C9288FD320D902EA005A313C /* Frameworks */,
+				C9288FD420D902EA005A313C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Cobalt tvOS";
+			productName = "Cobalt tvOS";
+			productReference = C9288FD620D902EA005A313C /* Cobalt.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C9288FE320D902EA005A313C /* Cobalt macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C928900220D902EA005A313C /* Build configuration list for PBXNativeTarget "Cobalt macOS" */;
+			buildPhases = (
+				C9288FE020D902EA005A313C /* Sources */,
+				C9288FE120D902EA005A313C /* Frameworks */,
+				C9288FE220D902EA005A313C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Cobalt macOS";
+			productName = "Cobalt macOS";
+			productReference = C9288FE420D902EA005A313C /* Cobalt.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C9288FB720D902E7005A313C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Mo Becher";
+				TargetAttributes = {
+					C9288FC320D902EA005A313C = {
+						CreatedOnToolsVersion = 9.4;
+					};
+					C9288FD520D902EA005A313C = {
+						CreatedOnToolsVersion = 9.4;
+					};
+					C9288FE320D902EA005A313C = {
+						CreatedOnToolsVersion = 9.4;
+					};
+				};
+			};
+			buildConfigurationList = C9288FBA20D902E7005A313C /* Build configuration list for PBXProject "Cobalt" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C9288FB620D902E7005A313C;
+			productRefGroup = C9288FC520D902EA005A313C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C9288FC320D902EA005A313C /* Cobalt iOS */,
+				C9288FD520D902EA005A313C /* Cobalt tvOS */,
+				C9288FE320D902EA005A313C /* Cobalt macOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C9288FC220D902EA005A313C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9288FF420D902EA005A313C /* ShaderTypes.h in Resources */,
+				C9288FCD20D902EA005A313C /* Main.storyboard in Resources */,
+				C9288FF720D902EA005A313C /* Assets.xcassets in Resources */,
+				C9288FD020D902EA005A313C /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9288FD420D902EA005A313C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9288FDE20D902EA005A313C /* Main.storyboard in Resources */,
+				C9288FF820D902EA005A313C /* Assets.xcassets in Resources */,
+				C9288FF520D902EA005A313C /* ShaderTypes.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9288FE220D902EA005A313C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9288FEC20D902EA005A313C /* Main.storyboard in Resources */,
+				C9288FF920D902EA005A313C /* Assets.xcassets in Resources */,
+				C9288FF620D902EA005A313C /* ShaderTypes.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C9288FC020D902EA005A313C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9288FF120D902EA005A313C /* Renderer.swift in Sources */,
+				C9288FEE20D902EA005A313C /* Shaders.metal in Sources */,
+				C9288FCA20D902EA005A313C /* GameViewController.swift in Sources */,
+				C9288FC820D902EA005A313C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9288FD220D902EA005A313C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9288FF220D902EA005A313C /* Renderer.swift in Sources */,
+				C9288FEF20D902EA005A313C /* Shaders.metal in Sources */,
+				C9288FDB20D902EA005A313C /* GameViewController.swift in Sources */,
+				C9288FD920D902EA005A313C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9288FE020D902EA005A313C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9288FF320D902EA005A313C /* Renderer.swift in Sources */,
+				C9288FF020D902EA005A313C /* Shaders.metal in Sources */,
+				C9288FE920D902EA005A313C /* GameViewController.swift in Sources */,
+				C9288FE720D902EA005A313C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C9288FCB20D902EA005A313C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9288FCC20D902EA005A313C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C9288FCE20D902EA005A313C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9288FCF20D902EA005A313C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		C9288FDC20D902EA005A313C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9288FDD20D902EA005A313C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C9288FEA20D902EA005A313C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9288FEB20D902EA005A313C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C9288FFA20D902EA005A313C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C9288FFB20D902EA005A313C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		C9288FFD20D902EA005A313C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Cobalt iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobecher.Cobalt;
+				PRODUCT_NAME = Cobalt;
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "Cobalt Shared/ShaderTypes.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C9288FFE20D902EA005A313C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Cobalt iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobecher.Cobalt;
+				PRODUCT_NAME = Cobalt;
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "Cobalt Shared/ShaderTypes.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C928900020D902EA005A313C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "tvOS App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "tvOS LaunchImage";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Cobalt tvOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobecher.Cobalt;
+				PRODUCT_NAME = Cobalt;
+				SDKROOT = appletvos;
+				SWIFT_OBJC_BRIDGING_HEADER = "Cobalt Shared/ShaderTypes.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.4;
+			};
+			name = Debug;
+		};
+		C928900120D902EA005A313C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "tvOS App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "tvOS LaunchImage";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Cobalt tvOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobecher.Cobalt;
+				PRODUCT_NAME = Cobalt;
+				SDKROOT = appletvos;
+				SWIFT_OBJC_BRIDGING_HEADER = "Cobalt Shared/ShaderTypes.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.4;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C928900320D902EA005A313C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Cobalt macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobecher.Cobalt;
+				PRODUCT_NAME = Cobalt;
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "Cobalt Shared/ShaderTypes.h";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		C928900420D902EA005A313C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Cobalt macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobecher.Cobalt;
+				PRODUCT_NAME = Cobalt;
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "Cobalt Shared/ShaderTypes.h";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C9288FBA20D902E7005A313C /* Build configuration list for PBXProject "Cobalt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9288FFA20D902EA005A313C /* Debug */,
+				C9288FFB20D902EA005A313C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9288FFC20D902EA005A313C /* Build configuration list for PBXNativeTarget "Cobalt iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9288FFD20D902EA005A313C /* Debug */,
+				C9288FFE20D902EA005A313C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9288FFF20D902EA005A313C /* Build configuration list for PBXNativeTarget "Cobalt tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C928900020D902EA005A313C /* Debug */,
+				C928900120D902EA005A313C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C928900220D902EA005A313C /* Build configuration list for PBXNativeTarget "Cobalt macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C928900320D902EA005A313C /* Debug */,
+				C928900420D902EA005A313C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C9288FB720D902E7005A313C /* Project object */;
+}
