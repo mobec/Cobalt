@@ -29,6 +29,33 @@
 		C9288FF720D902EA005A313C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9288FBF20D902EA005A313C /* Assets.xcassets */; };
 		C9288FF820D902EA005A313C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9288FBF20D902EA005A313C /* Assets.xcassets */; };
 		C9288FF920D902EA005A313C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9288FBF20D902EA005A313C /* Assets.xcassets */; };
+		C928900820D92BA8005A313C /* RenderPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C928900720D92BA8005A313C /* RenderPass.swift */; };
+		C928900920D92BA8005A313C /* RenderPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C928900720D92BA8005A313C /* RenderPass.swift */; };
+		C928900A20D92BA8005A313C /* RenderPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C928900720D92BA8005A313C /* RenderPass.swift */; };
+		C9AE3BE020E0DC3700DDBF52 /* ShaderBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AE3BDF20E0DC3700DDBF52 /* ShaderBuffer.swift */; };
+		C9AE3BE120E0DC3700DDBF52 /* ShaderBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AE3BDF20E0DC3700DDBF52 /* ShaderBuffer.swift */; };
+		C9AE3BE220E0DC3700DDBF52 /* ShaderBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AE3BDF20E0DC3700DDBF52 /* ShaderBuffer.swift */; };
+		C9AE3BE420E0E86A00DDBF52 /* ShaderTexture.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AE3BE320E0E86A00DDBF52 /* ShaderTexture.swift */; };
+		C9AE3BE520E0E86A00DDBF52 /* ShaderTexture.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AE3BE320E0E86A00DDBF52 /* ShaderTexture.swift */; };
+		C9AE3BE620E0E86A00DDBF52 /* ShaderTexture.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AE3BE320E0E86A00DDBF52 /* ShaderTexture.swift */; };
+		C9AE3C3720E1189800DDBF52 /* ShaderRessourceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AE3C3620E1189800DDBF52 /* ShaderRessourceFactory.swift */; };
+		C9AE3C3820E1189800DDBF52 /* ShaderRessourceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AE3C3620E1189800DDBF52 /* ShaderRessourceFactory.swift */; };
+		C9AE3C3920E1189800DDBF52 /* ShaderRessourceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AE3C3620E1189800DDBF52 /* ShaderRessourceFactory.swift */; };
+		C9B18B7620DFEE5800D85496 /* BaseRenderPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B18B7520DFEE5800D85496 /* BaseRenderPass.swift */; };
+		C9B18B7720DFEE5800D85496 /* BaseRenderPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B18B7520DFEE5800D85496 /* BaseRenderPass.swift */; };
+		C9B18B7820DFEE5800D85496 /* BaseRenderPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B18B7520DFEE5800D85496 /* BaseRenderPass.swift */; };
+		C9B18B7A20E0033E00D85496 /* Shader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B18B7920E0033E00D85496 /* Shader.swift */; };
+		C9B18B7B20E0033E00D85496 /* Shader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B18B7920E0033E00D85496 /* Shader.swift */; };
+		C9B18B7C20E0033E00D85496 /* Shader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B18B7920E0033E00D85496 /* Shader.swift */; };
+		C9B18B8320E00C3A00D85496 /* FragmentShader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B18B8220E00C3A00D85496 /* FragmentShader.swift */; };
+		C9B18B8420E00C3A00D85496 /* FragmentShader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B18B8220E00C3A00D85496 /* FragmentShader.swift */; };
+		C9B18B8520E00C3A00D85496 /* FragmentShader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B18B8220E00C3A00D85496 /* FragmentShader.swift */; };
+		C9B18B8720E00C8B00D85496 /* VertexShader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B18B8620E00C8B00D85496 /* VertexShader.swift */; };
+		C9B18B8820E00C8B00D85496 /* VertexShader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B18B8620E00C8B00D85496 /* VertexShader.swift */; };
+		C9B18B8920E00C8B00D85496 /* VertexShader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B18B8620E00C8B00D85496 /* VertexShader.swift */; };
+		C9B18B8B20E03AC200D85496 /* ShaderRessource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B18B8A20E03AC200D85496 /* ShaderRessource.swift */; };
+		C9B18B8C20E03AC200D85496 /* ShaderRessource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B18B8A20E03AC200D85496 /* ShaderRessource.swift */; };
+		C9B18B8D20E03AC200D85496 /* ShaderRessource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B18B8A20E03AC200D85496 /* ShaderRessource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +79,15 @@
 		C9288FE820D902EA005A313C /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		C9288FEB20D902EA005A313C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C9288FED20D902EA005A313C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C928900720D92BA8005A313C /* RenderPass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderPass.swift; sourceTree = "<group>"; };
+		C9AE3BDF20E0DC3700DDBF52 /* ShaderBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShaderBuffer.swift; sourceTree = "<group>"; };
+		C9AE3BE320E0E86A00DDBF52 /* ShaderTexture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShaderTexture.swift; sourceTree = "<group>"; };
+		C9AE3C3620E1189800DDBF52 /* ShaderRessourceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShaderRessourceFactory.swift; sourceTree = "<group>"; };
+		C9B18B7520DFEE5800D85496 /* BaseRenderPass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRenderPass.swift; sourceTree = "<group>"; };
+		C9B18B7920E0033E00D85496 /* Shader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shader.swift; sourceTree = "<group>"; };
+		C9B18B8220E00C3A00D85496 /* FragmentShader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FragmentShader.swift; sourceTree = "<group>"; };
+		C9B18B8620E00C8B00D85496 /* VertexShader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VertexShader.swift; sourceTree = "<group>"; };
+		C9B18B8A20E03AC200D85496 /* ShaderRessource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShaderRessource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,8 +129,8 @@
 		C9288FBB20D902E7005A313C /* Cobalt Shared */ = {
 			isa = PBXGroup;
 			children = (
+				C928900620D90781005A313C /* Renderer */,
 				C9288FBC20D902E7005A313C /* Shaders.metal */,
-				C9288FBD20D902E7005A313C /* Renderer.swift */,
 				C9288FBE20D902E7005A313C /* ShaderTypes.h */,
 				C9288FBF20D902EA005A313C /* Assets.xcassets */,
 			);
@@ -143,6 +179,23 @@
 				C9288FED20D902EA005A313C /* Info.plist */,
 			);
 			path = "Cobalt macOS";
+			sourceTree = "<group>";
+		};
+		C928900620D90781005A313C /* Renderer */ = {
+			isa = PBXGroup;
+			children = (
+				C9B18B7920E0033E00D85496 /* Shader.swift */,
+				C9B18B8220E00C3A00D85496 /* FragmentShader.swift */,
+				C9B18B8620E00C8B00D85496 /* VertexShader.swift */,
+				C9288FBD20D902E7005A313C /* Renderer.swift */,
+				C928900720D92BA8005A313C /* RenderPass.swift */,
+				C9B18B7520DFEE5800D85496 /* BaseRenderPass.swift */,
+				C9B18B8A20E03AC200D85496 /* ShaderRessource.swift */,
+				C9AE3BDF20E0DC3700DDBF52 /* ShaderBuffer.swift */,
+				C9AE3BE320E0E86A00DDBF52 /* ShaderTexture.swift */,
+				C9AE3C3620E1189800DDBF52 /* ShaderRessourceFactory.swift */,
+			);
+			path = Renderer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,10 +332,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9B18B8720E00C8B00D85496 /* VertexShader.swift in Sources */,
+				C9B18B7A20E0033E00D85496 /* Shader.swift in Sources */,
+				C9AE3BE420E0E86A00DDBF52 /* ShaderTexture.swift in Sources */,
 				C9288FF120D902EA005A313C /* Renderer.swift in Sources */,
 				C9288FEE20D902EA005A313C /* Shaders.metal in Sources */,
 				C9288FCA20D902EA005A313C /* GameViewController.swift in Sources */,
+				C9AE3BE020E0DC3700DDBF52 /* ShaderBuffer.swift in Sources */,
+				C9B18B8320E00C3A00D85496 /* FragmentShader.swift in Sources */,
+				C9AE3C3720E1189800DDBF52 /* ShaderRessourceFactory.swift in Sources */,
+				C9B18B8B20E03AC200D85496 /* ShaderRessource.swift in Sources */,
+				C9B18B7620DFEE5800D85496 /* BaseRenderPass.swift in Sources */,
 				C9288FC820D902EA005A313C /* AppDelegate.swift in Sources */,
+				C928900820D92BA8005A313C /* RenderPass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,10 +352,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9B18B8820E00C8B00D85496 /* VertexShader.swift in Sources */,
+				C9B18B7B20E0033E00D85496 /* Shader.swift in Sources */,
+				C9AE3BE520E0E86A00DDBF52 /* ShaderTexture.swift in Sources */,
 				C9288FF220D902EA005A313C /* Renderer.swift in Sources */,
 				C9288FEF20D902EA005A313C /* Shaders.metal in Sources */,
 				C9288FDB20D902EA005A313C /* GameViewController.swift in Sources */,
+				C9AE3BE120E0DC3700DDBF52 /* ShaderBuffer.swift in Sources */,
+				C9B18B8420E00C3A00D85496 /* FragmentShader.swift in Sources */,
+				C9AE3C3820E1189800DDBF52 /* ShaderRessourceFactory.swift in Sources */,
+				C9B18B8C20E03AC200D85496 /* ShaderRessource.swift in Sources */,
+				C9B18B7720DFEE5800D85496 /* BaseRenderPass.swift in Sources */,
 				C9288FD920D902EA005A313C /* AppDelegate.swift in Sources */,
+				C928900920D92BA8005A313C /* RenderPass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,10 +372,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9B18B8920E00C8B00D85496 /* VertexShader.swift in Sources */,
+				C9B18B7C20E0033E00D85496 /* Shader.swift in Sources */,
+				C9AE3BE620E0E86A00DDBF52 /* ShaderTexture.swift in Sources */,
 				C9288FF320D902EA005A313C /* Renderer.swift in Sources */,
 				C9288FF020D902EA005A313C /* Shaders.metal in Sources */,
 				C9288FE920D902EA005A313C /* GameViewController.swift in Sources */,
+				C9AE3BE220E0DC3700DDBF52 /* ShaderBuffer.swift in Sources */,
+				C9B18B8520E00C3A00D85496 /* FragmentShader.swift in Sources */,
+				C9AE3C3920E1189800DDBF52 /* ShaderRessourceFactory.swift in Sources */,
+				C9B18B8D20E03AC200D85496 /* ShaderRessource.swift in Sources */,
+				C9B18B7820DFEE5800D85496 /* BaseRenderPass.swift in Sources */,
 				C9288FE720D902EA005A313C /* AppDelegate.swift in Sources */,
+				C928900A20D92BA8005A313C /* RenderPass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,6 +539,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C45J74U2LR;
 				INFOPLIST_FILE = "Cobalt iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -480,6 +561,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C45J74U2LR;
 				INFOPLIST_FILE = "Cobalt iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (

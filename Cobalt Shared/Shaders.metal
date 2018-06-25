@@ -28,8 +28,7 @@ typedef struct
     float2 texCoord;
 } ColorInOut;
 
-vertex ColorInOut vertexShader(Vertex in [[stage_in]],
-                               constant Uniforms & uniforms [[ buffer(BufferIndexUniforms) ]])
+vertex ColorInOut vertexShader(Vertex in [[stage_in]], constant Uniforms & uniforms [[ buffer(BufferIndexUniforms) ]])
 {
     ColorInOut out;
 
