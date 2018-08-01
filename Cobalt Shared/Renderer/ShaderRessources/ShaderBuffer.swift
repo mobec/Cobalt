@@ -10,6 +10,7 @@ import Metal
 import MetalKit
 
 protocol PShaderBuffer {
+    var bufferIndex: BufferIndex { get }
     var bufferGPU: MTLBuffer { get }
     var offset: Int { get }
     func update()
@@ -23,13 +24,17 @@ class ShaderBuffer<T> : PShaderBuffer {
     fileprivate let alignedSize = (MemoryLayout<T>.size & ~0xFF) + 0x100
     var ressourceCPU: UnsafeMutablePointer<T>
     let maxBuffersInFlight = 3
+    let bufferIndex: BufferIndex
     
-    init?(device: MTLDevice, label: String){
+    init?(context: Context, bufferIndex: BufferIndex, label: String){
+        self.bufferIndex = bufferIndex
         let bufferSize = alignedSize * maxBuffersInFlight
-        guard let buffer = device.makeBuffer(length: bufferSize, options: [MTLResourceOptions.storageModeShared]) else { return nil}
+        guard let buffer = context.device.makeBuffer(length: bufferSize, options: [MTLResourceOptions.storageModeShared]) else { return nil}
         self.bufferGPU = buffer
         self.bufferGPU.label = label
         self.ressourceCPU = UnsafeMutableRawPointer(bufferGPU.contents()).bindMemory(to: T.self, capacity: 1)
+        
+        context.register(buffer: self)
     }
     
     func update() {

@@ -10,13 +10,12 @@
 
 import Metal
 import MetalKit
-import simd
 
 enum RendererError: Error {
     case badVertexDescriptor
 }
 
-let maxBuffersInFlight = 3
+let maxBuffersInFlight = 1
 
 class Renderer: NSObject, MTKViewDelegate {
     
@@ -25,7 +24,6 @@ class Renderer: NSObject, MTKViewDelegate {
     
     let inFlightSemaphore = DispatchSemaphore(value: maxBuffersInFlight)
     
-    var shaderRessources: ShaderRessourceFactory
     weak var uniforms: ShaderBuffer<Uniforms>?
     weak var colorMap: ShaderTexture?
     
@@ -33,23 +31,30 @@ class Renderer: NSObject, MTKViewDelegate {
     var rotation: Float = 0
     var mesh: MTKMesh
     var renderPass: BaseRenderPass!
+    var gbufferPass: GBufferRenderPass?
+    var deferredLightingPass: DeferredLightingRenderPass?
+    
+    var context: Context
     
     init?(metalKitView: MTKView) {
         self.device = metalKitView.device!
+        
+        guard let context = Context(device: self.device) else { return nil }
+        self.context = context
 
         guard let queue = self.device.makeCommandQueue() else { return nil }
         self.commandQueue = queue
         
-        self.shaderRessources = ShaderRessourceFactory(device: self.device)
-        
-        
-        guard let uniforms : ShaderBuffer<Uniforms> = self.shaderRessources.makeShaderBuffer(label: "Uniforms", bufferIndex: BufferIndex.uniforms) else {return nil}
+        guard let uniforms : ShaderBuffer<Uniforms> = ShaderBuffer(context: self.context, bufferIndex: BufferIndex.uniforms, label: "Uniforms") else {return nil}
         self.uniforms = uniforms
-        guard let colorMap = self.shaderRessources.makeShaderTexture(name: "ColorMap", textureIndex: TextureIndex.color) else {return nil}
+        guard let colorMap = RessourceShaderTexture(context: self.context, textureIndex: TextureIndex.colorMap, name: "ColorMap") else { return nil }
         self.colorMap = colorMap
         
-        renderPass = BaseRenderPass(v: metalKitView, shaderRessources: shaderRessources)
-        let mtlVertexDescriptor = BaseRenderPass.buildMetalVertexDescriptor()
+        renderPass = BaseRenderPass(context: self.context, v: metalKitView)
+        self.gbufferPass = GBufferRenderPass(context: self.context, viewPortSize: metalKitView.drawableSize)
+        self.deferredLightingPass = DeferredLightingRenderPass(context: self.context, view: metalKitView)
+        
+        let mtlVertexDescriptor = Renderer.buildMetalVertexDescriptor()
         
         do {
             mesh = try Renderer.buildMesh(device: device, mtlVertexDescriptor: mtlVertexDescriptor)
@@ -59,7 +64,6 @@ class Renderer: NSObject, MTKViewDelegate {
         }
         
         super.init()
-        
     }
     
     class func buildMesh(device: MTLDevice,
@@ -122,6 +126,32 @@ class Renderer: NSObject, MTKViewDelegate {
         rotation += 0.01
     }
     
+    class func buildMetalVertexDescriptor() -> MTLVertexDescriptor
+    {
+        // Creete a Metal vertex descriptor specifying how vertices will by laid out for input into our render
+        //   pipeline and how we'll layout our Model IO vertices
+        
+        let mtlVertexDescriptor = MTLVertexDescriptor()
+        
+        mtlVertexDescriptor.attributes[VertexAttribute.position.rawValue].format = MTLVertexFormat.float3
+        mtlVertexDescriptor.attributes[VertexAttribute.position.rawValue].offset = 0
+        mtlVertexDescriptor.attributes[VertexAttribute.position.rawValue].bufferIndex = BufferIndex.meshPositions.rawValue
+        
+        mtlVertexDescriptor.attributes[VertexAttribute.texcoord.rawValue].format = MTLVertexFormat.float2
+        mtlVertexDescriptor.attributes[VertexAttribute.texcoord.rawValue].offset = 0
+        mtlVertexDescriptor.attributes[VertexAttribute.texcoord.rawValue].bufferIndex = BufferIndex.meshGenerics.rawValue
+        
+        mtlVertexDescriptor.layouts[BufferIndex.meshPositions.rawValue].stride = 12
+        mtlVertexDescriptor.layouts[BufferIndex.meshPositions.rawValue].stepRate = 1
+        mtlVertexDescriptor.layouts[BufferIndex.meshPositions.rawValue].stepFunction = MTLVertexStepFunction.perVertex
+        
+        mtlVertexDescriptor.layouts[BufferIndex.meshGenerics.rawValue].stride = 8
+        mtlVertexDescriptor.layouts[BufferIndex.meshGenerics.rawValue].stepRate = 1
+        mtlVertexDescriptor.layouts[BufferIndex.meshGenerics.rawValue].stepFunction = MTLVertexStepFunction.perVertex
+        
+        return mtlVertexDescriptor
+    }
+    
     func draw(in view: MTKView) {
         /// Per frame updates hare
         
@@ -138,7 +168,11 @@ class Renderer: NSObject, MTKViewDelegate {
             
             self.updateGameState()
             
-            renderPass.draw(commandBuffer: commandBuffer, meshes: [mesh])
+            gbufferPass?.draw(commandBuffer: commandBuffer, meshes: [mesh], vertexDescriptor: Renderer.buildMetalVertexDescriptor())
+            deferredLightingPass?.draw(commandBuffer: commandBuffer, meshes: [mesh], vertexDescriptor: Renderer.buildMetalVertexDescriptor())
+            //renderPass.draw(commandBuffer: commandBuffer, meshes: [mesh], vertexDescriptor: Renderer.buildMetalVertexDescriptor())
+            
+            commandBuffer.commit()
         }
     }
     
@@ -148,38 +182,4 @@ class Renderer: NSObject, MTKViewDelegate {
         let aspect = Float(size.width) / Float(size.height)
         projectionMatrix = matrix_perspective_right_hand(fovyRadians: radians_from_degrees(65), aspectRatio:aspect, nearZ: 0.1, farZ: 100.0)
     }
-}
-
-// Generic matrix math utility functions
-func matrix4x4_rotation(radians: Float, axis: float3) -> matrix_float4x4 {
-    let unitAxis = normalize(axis)
-    let ct = cosf(radians)
-    let st = sinf(radians)
-    let ci = 1 - ct
-    let x = unitAxis.x, y = unitAxis.y, z = unitAxis.z
-    return matrix_float4x4.init(columns:(vector_float4(    ct + x * x * ci, y * x * ci + z * st, z * x * ci - y * st, 0),
-                                         vector_float4(x * y * ci - z * st,     ct + y * y * ci, z * y * ci + x * st, 0),
-                                         vector_float4(x * z * ci + y * st, y * z * ci - x * st,     ct + z * z * ci, 0),
-                                         vector_float4(                  0,                   0,                   0, 1)))
-}
-
-func matrix4x4_translation(_ translationX: Float, _ translationY: Float, _ translationZ: Float) -> matrix_float4x4 {
-    return matrix_float4x4.init(columns:(vector_float4(1, 0, 0, 0),
-                                         vector_float4(0, 1, 0, 0),
-                                         vector_float4(0, 0, 1, 0),
-                                         vector_float4(translationX, translationY, translationZ, 1)))
-}
-
-func matrix_perspective_right_hand(fovyRadians fovy: Float, aspectRatio: Float, nearZ: Float, farZ: Float) -> matrix_float4x4 {
-    let ys = 1 / tanf(fovy * 0.5)
-    let xs = ys / aspectRatio
-    let zs = farZ / (nearZ - farZ)
-    return matrix_float4x4.init(columns:(vector_float4(xs,  0, 0,   0),
-                                         vector_float4( 0, ys, 0,   0),
-                                         vector_float4( 0,  0, zs, -1),
-                                         vector_float4( 0,  0, zs * nearZ, 0)))
-}
-
-func radians_from_degrees(_ degrees: Float) -> Float {
-    return (degrees / 180) * .pi
 }
