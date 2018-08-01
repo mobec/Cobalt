@@ -181,5 +181,7 @@ class Renderer: NSObject, MTKViewDelegate {
         
         let aspect = Float(size.width) / Float(size.height)
         projectionMatrix = matrix_perspective_right_hand(fovyRadians: radians_from_degrees(65), aspectRatio:aspect, nearZ: 0.1, farZ: 100.0)
+        gbufferPass?.drawableSizeWillChange(size: size)
+        deferredLightingPass?.drawableSizeWillChange(size: size)
     }
 }
